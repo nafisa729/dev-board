@@ -30,34 +30,49 @@
        </nav>
     </header>
     <main>
-        <div class="flex justify-center items-center gap-4">
-            <div class="w-[1146px] h-[918px] bg-white rounded-xl flex justify-center gap-4 pt-5">
-                <div class="w-[263px] h-[128px] bg-[#f4f7ff] rounded-xl flex justify-center items-center gap-5">
-                    <div class="w-[64px] h-[64px] bg-white rounded-full flex justify-center items-center">
-                        <i class="fa-solid fa-square-check fa-2xl" style="color: #385af8;"></i>   
+        <section>
+            <div class="flex justify-center items-center gap-4">
+                <div class="w-[1146px] h-[918px] bg-white rounded-xl flex justify-center gap-4 pt-5">
+                    <div class="w-[263px] h-[128px] bg-[#f4f7ff] rounded-xl flex justify-center items-center gap-5">
+                        <div class="w-[64px] h-[64px] bg-white rounded-full flex justify-center items-center">
+                            <i class="fa-solid fa-square-check fa-2xl" style="color: #385af8;"></i>   
+                        </div>
+                        <div>
+                            <p class="text-x font-medium">Task Assigned</p>
+                            <p class="text-2xl font-bold">0</p>
+                        </div>
                     </div>
-                    <div>
-                        <p class="text-x font-medium">Task Assigned</p>
-                        <p class="text-2xl font-bold">0</p>
+                    <div class="w-[524px] h-[128px] bg-[#f4f7ff] rounded-xl bg-linear-to-r from-[#3d5ff8] to-[#91a1f4] flex justify-center items-center ml-8 gap-4">
+                        <img src="assets/board.png" alt="">
+                        <p class="text-xl font-medium text-white">Discover Something <br> New Today</p>
+                    </div>
+                    <div id="chng-date" class="w-[263px] h-[128px] bg-[#f4f7ff] rounded-xl flex justify-center items-center gap-4" >
+                       <div class="w-[64px] h-[64px] bg-white rounded-xl flex justify-center items-center">
+                        <i class="fa-solid fa-toolbox fa-2xl" style="color: #01303b;"></i>
+                       </div>
+                       <div class="text-xl ">
+                        <p class="font-normal">saturday</p>
+                        <p class="font-bold">2 March,2025</p>
+                       </div>
                     </div>
                 </div>
-                <div class="w-[524px] h-[128px] bg-[#f4f7ff] rounded-xl bg-linear-to-r from-[#3d5ff8] to-[#91a1f4] flex justify-center items-center ml-8 gap-4">
-                    <img src="assets/board.png" alt="">
-                    <p class="text-xl font-medium text-white">Discover Something <br> New Today</p>
-                </div>
-                <div id="chng-date" class="w-[263px] h-[128px] bg-[#f4f7ff] rounded-xl flex justify-center items-center gap-4" >
-                   <div class="w-[64px] h-[64px] bg-white rounded-xl flex justify-center items-center">
-                    <i class="fa-solid fa-toolbox fa-2xl" style="color: #01303b;"></i>
-                   </div>
-                   <div class="text-xl ">
-                    <p class="font-normal">saturday</p>
-                    <p class="font-bold">2 March,2025</p>
-                   </div>
+                <div class="w-[366px] h-[918px] bg-white rounded-xl">
+                    <div class="my-5 border-b-2 border-dashed border-[#f4f7ff]">
+                        <div class="flex justify-center items-center gap-4">
+                            <i class="fa-solid fa-clock-rotate-left fa-xl" style="color: #01303b;"></i>
+                            <p class="text-lg font-medium">Activity Log</p>
+                        </div>
+                        <div class="flex justify-center items-center mt-5">
+                            <button class="w-[150px] h-[44px] rounded-xl text-lg font-normal text-white bg-[#355af8]">Clear History</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <!-- side div -->
-            <div class="w-[366px] h-[918px] bg-white rounded-xl"></div>
-        </div>
+            
+        </section>
+            
+           
+       
         
     </main>
     <script src="./script/chng-btn.js" defer ></script>
