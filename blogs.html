@@ -12,7 +12,7 @@
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <script src="https://kit.fontawesome.com/439ca93636.js" crossorigin="anonymous"></script>
 </head>
-<body class="bg-[#f4f7ff] h-screen m-0 p-0 flex flex-col justify-between">
+<body class="bg-[#f4f7ff] h-full m-0 p-0 flex flex-col justify-between">
     <header>
         <nav class="flex justify-between w-[1536px] h-[100px] bg-white rounded-xl mx-auto my-10">
           <div class="flex items-center gap-4 ml-10 my-2">
@@ -50,12 +50,12 @@
                 <h3 class="text-2xl font-semibold">What is the difference between innerHTML, innerText, and textContent?</h3>
                 <hr class="border-dotted border-t-2 border-gray-400 my-4">
                 <p class="text-lg">
-                    <table border="1" cellpadding="10" cellspacing="0" style="width: 100%; text-align: center; border-collapse: collapse;">
+                    <table border-1 cellpadding="10" cellspacing="0" style="width: 100%; text-align: center; border-collapse: collapse;">
                         <thead>
                             <tr>
-                                <th style="border: 1px solid black;">innerHTML</th>
-                                <th style="border: 1px solid black;">innerText</th>
-                                <th style="border: 1px solid black;">textContent</th>
+                                <th style="border: 1px solid black;"><code>innerHTML</code></th>
+                                <th style="border: 1px solid black;"><code>innerText</code></th>
+                                <th style="border: 1px solid black;"><code>textContent</code></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -65,13 +65,13 @@
                                 <td style="border: 1px solid black;">Represents the raw text content of an element, excluding HTML tags.</td>
                             </tr>
                             <tr>
-                                <td style="border: 1px solid black;">Includes HTML tags (e.g., <code>&lt;p&gt;</code>, <code>&lt;div&gt;</code>).</td>
-                                <td style="border: 1px solid black;">Excludes HTML tags but respects visible content (e.g., hidden or styled elements are excluded).</td>
-                                <td style="border: 1px solid black;">Excludes HTML tags and includes all text (even hidden text).</td>
+                                <td style="border: 1px solid black;">Includes HTML tags</td>
+                                <td style="border: 1px solid black;">Excludes HTML tags but respects visible content</td>
+                                <td style="border: 1px solid black;">Excludes HTML tags and includes all text</td>
                             </tr>
                             <tr>
                                 <td style="border: 1px solid black;">Does not consider CSS visibility or styling.</td>
-                                <td style="border: 1px solid black;">Considers CSS styling (e.g., visibility, text-transform). Non-visible text is excluded.</td>
+                                <td style="border: 1px solid black;">Considers CSS styling</td>
                                 <td style="border: 1px solid black;">Does not consider CSS styling. All text is included regardless of visibility.</td>
                             </tr>
                             <tr>
@@ -93,7 +93,7 @@
                 <hr class="border-dotted border-t-2 border-gray-400 my-4">
                 <p class="text-lg">Event bubbling is an aspect of the DOM (Document Object Model) where an event, triggered on a child object, "bubbles up" to its parents within the DOM tree. So when a mouseover, a click, or some other type of event is triggered on an object, it does not merely interact with the element—it finds its way back up through every one of its parents until it reaches the top of the tree (the document object).</p>
             </div>
-            <div class="bg-white p-6 rounded-xl shadow-md">
+            <div class="bg-white p-6 rounded-xl shadow-md mb-10">
                 <h3 class="text-2xl font-semibold">How do you create, add, and remove elements using JavaScript?</h3>
                 <hr class="border-dotted border-t-2 border-gray-400 my-4">
                 <p class="text-lg">

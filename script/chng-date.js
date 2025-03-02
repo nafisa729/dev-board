@@ -1,13 +1,13 @@
-
 function currentDate() {
     const date = new Date();
-    const options = { weekday: 'short', day: 'numeric', month: 'long', year: 'numeric' };
-    const formattedDate = date.toLocaleDateString('en-US', options);
     
-    const [dayName, day, month, year] = formattedDate.split(" ");
-    
+    const dayName = date.toLocaleDateString('en-US', { weekday: 'short' });
+    const day = date.getDate();
+    const month = date.toLocaleDateString('en-US', { month: 'long' });
+    const year = date.getFullYear();
+
     document.getElementById("day-name").textContent = `${dayName},`;
-    document.getElementById("full-date").textContent = `${day} ${month}, ${year}`;
+    document.getElementById("full-date").textContent = `${month} ${day}, ${year}`;
 }
 
 currentDate();
