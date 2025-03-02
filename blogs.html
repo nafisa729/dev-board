@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs</title>
+    <link rel="icon" type="image/x-icon" href="assets/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="https://kit.fontawesome.com/439ca93636.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-[#f4f7ff] h-screen m-0 p-0 flex flex-col justify-between">
+    <header>
+        <nav class="flex justify-between w-[1536px] h-[100px] bg-white rounded-xl mx-auto my-10">
+          <div class="flex items-center gap-4 ml-10 my-2">
+                 <img src="assets/logo.png" alt="">
+                 <h1 class="text-4xl">Dev<span class="font-bold">Board</span></h1>
+            </div> 
+            <div class="flex items-center gap-4 mr-10">
+                 <a href="index.html" class="bg-[#3461f3] text-white px-6 py-3 rounded-xl text-xl font-semibold shadow-md">
+                     Back to Desk
+                 </a>
+            </div> 
+        </nav>
+     </header>     
+    <main class="bg-[#f4f7ff] w-[1536px] mx-auto text-center">
+        <h1 class="text-4xl font-bold mb-6">Blogs</h1>
+        
+        <div class="grid grid-cols-1 gap-6 text-left">
+            <div class="bg-white p-6 rounded-xl shadow-md">
+                <h3 class="text-2xl font-semibold">What are the different ways to select an element in the DOM?</h3>
+                <hr class="border-dotted border-t-2 border-gray-400 my-4">
+                <p class="text-lg">
+                    By using getElementById <br>
+                    const elementById = document.getElementById("myElement"); <br>
+                    By using querySelector <br>
+                    const elementByQuerySelector = document.querySelector(".myClass"); <br>
+                    By using querySelectorAll <br>
+                    const elementsByQuerySelectorAll = document.querySelectorAll("div.myClass"); <br>
+                    By using getAttribute <br>
+                    const attributeValue = document.querySelector("a").getAttribute("href"); <br>
+                    By using closest <br> 
+                    const closestElement = document.querySelector(".child").closest(".parent"); <br>
+                </p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-md">
+                <h3 class="text-2xl font-semibold">What is the difference between innerHTML, innerText, and textContent?</h3>
+                <hr class="border-dotted border-t-2 border-gray-400 my-4">
+                <p class="text-lg">
+                    <table border="1" cellpadding="10" cellspacing="0" style="width: 100%; text-align: center; border-collapse: collapse;">
+                        <thead>
+                            <tr>
+                                <th style="border: 1px solid black;">innerHTML</th>
+                                <th style="border: 1px solid black;">innerText</th>
+                                <th style="border: 1px solid black;">textContent</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="border: 1px solid black;">Represents the HTML content inside an element, including HTML tags.</td>
+                                <td style="border: 1px solid black;">Represents the visible text content of an element, considering the rendered output.</td>
+                                <td style="border: 1px solid black;">Represents the raw text content of an element, excluding HTML tags.</td>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px solid black;">Includes HTML tags (e.g., <code>&lt;p&gt;</code>, <code>&lt;div&gt;</code>).</td>
+                                <td style="border: 1px solid black;">Excludes HTML tags but respects visible content (e.g., hidden or styled elements are excluded).</td>
+                                <td style="border: 1px solid black;">Excludes HTML tags and includes all text (even hidden text).</td>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px solid black;">Does not consider CSS visibility or styling.</td>
+                                <td style="border: 1px solid black;">Considers CSS styling (e.g., visibility, text-transform). Non-visible text is excluded.</td>
+                                <td style="border: 1px solid black;">Does not consider CSS styling. All text is included regardless of visibility.</td>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px solid black;">Relatively slower because it involves parsing HTML content.</td>
+                                <td style="border: 1px solid black;">Slower than <code>textContent</code> due to layout reflows for rendering the visible text.</td>
+                                <td style="border: 1px solid black;">Faster than <code>innerText</code> as it does not require rendering or layout calculations.</td>
+                            </tr>
+                        </tbody>
+                    </table>                    
+                </p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-md">
+                <h3 class="text-2xl font-semibold">What is event delegation in the DOM?</h3>
+                <hr class="border-dotted border-t-2 border-gray-400 my-4">
+                <p class="text-lg">Event delegation is a technique in JavaScript where you attach a single event listener to the parent element instead of attaching numerous event listeners to its child elements. This takes advantage of event bubbling, where an event on a child element bubbles (or propagates) to its parent elements.</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-md">
+                <h3 class="text-2xl font-semibold">What is event bubbling in the DOM?</h3>
+                <hr class="border-dotted border-t-2 border-gray-400 my-4">
+                <p class="text-lg">Event bubbling is an aspect of the DOM (Document Object Model) where an event, triggered on a child object, "bubbles up" to its parents within the DOM tree. So when a mouseover, a click, or some other type of event is triggered on an object, it does not merely interact with the element—it finds its way back up through every one of its parents until it reaches the top of the tree (the document object).</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-md">
+                <h3 class="text-2xl font-semibold">How do you create, add, and remove elements using JavaScript?</h3>
+                <hr class="border-dotted border-t-2 border-gray-400 my-4">
+                <p class="text-lg">
+                    To create an element <br>
+                    let newElement = document.createElement('div'); // Creates a new div element <br>
+                    To add an element to the DOM <br>
+                    document.body.appendChild(newElement); // Adds the new element to the body <br>
+                    To Remove an element from the DOM <br>
+                    newElement.remove(); // Removes the new element <br>
+                </p>
+            </div>
+        </div>
+    </main> 
+</body>
+    

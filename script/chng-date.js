@@ -1,9 +1,13 @@
-function updateDate() {
-        const dateElement = document.getElementById("chng-date");
-        const today = new Date();
+
+function currentDate() {
+    const date = new Date();
+    const options = { weekday: 'short', day: 'numeric', month: 'long', year: 'numeric' };
+    const formattedDate = date.toLocaleDateString('en-US', options);
     
-        const formattedDate = today.getDate().toString().padStart(2, '0') + "-" +
-                              (today.getMonth() + 1).toString().padStart(2, '0') + "-" +
-                              today.getFullYear();
-        dateElement.textContent = formattedDate;
-    }
+    const [dayName, day, month, year] = formattedDate.split(" ");
+    
+    document.getElementById("day-name").textContent = `${dayName},`;
+    document.getElementById("full-date").textContent = `${day} ${month}, ${year}`;
+}
+
+currentDate();

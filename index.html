@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dev-Board</title>
+    <title>Dev Board</title>
+    <link rel="icon" type="image/x-icon" href="assets/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -24,40 +25,106 @@
                 <p class="text-2xl font-bold">23</p>  
             </div>
             <div id="chng-btn" class="w-[64px] h-[64px] rounded-full bg-[#f4f7ff] flex justify-center items-center mr-4">
-                <img src="assets/theme-btn.png" alt="">
+                <img class="active:animate-spin" src="assets/theme-btn.png" alt="">
             </div>
            </div> 
        </nav>
     </header>
     <main>
-        <section>
-            <div class="flex justify-center items-center gap-4">
-                <div class="w-[1146px] h-[918px] bg-white rounded-xl flex justify-center gap-4 pt-5">
-                    <div class="w-[263px] h-[128px] bg-[#f4f7ff] rounded-xl flex justify-center items-center gap-5">
-                        <div class="w-[64px] h-[64px] bg-white rounded-full flex justify-center items-center">
-                            <i class="fa-solid fa-square-check fa-2xl" style="color: #385af8;"></i>   
+        <section class="flex justify-center items-center gap-4 ">
+            <section class="w-[1146px] h-[918px] bg-white rounded-xl">
+                <section>
+                        <div class=" flex justify-center gap-4 pt-5">
+                            <div class="w-[263px] h-[128px] bg-[#f4f7ff] rounded-xl flex justify-center items-center gap-5">
+                                <div class="w-[64px] h-[64px] bg-white rounded-full flex justify-center items-center">
+                                    <i class="fa-solid fa-square-check fa-2xl" style="color: #385af8;"></i>   
+                                </div>
+                                <div>
+                                    <p class="text-x font-medium">Task Assigned</p>
+                                    <p class="text-2xl font-bold">0</p>
+                                </div>
+                            </div>
+                            <div id="blog-btn" class="w-[524px] h-[128px] rounded-xl bg-gradient-to-r from-[#3d5ff8] to-[#91a1f4] flex justify-center items-center ml-8 gap-4">
+                                    <img src="assets/board.png" alt="">
+                                    <p class="text-xl font-medium text-white">Discover Something <br> New Today</p>
+                            </div>
+                            <div id="chng-date" class="w-[263px] h-[128px] bg-[#f4f7ff] rounded-xl flex justify-center items-center gap-4" >
+                               <div class="w-[64px] h-[64px] bg-white rounded-xl flex justify-center items-center">
+                                    <i class="fa-solid fa-toolbox fa-2xl" style="color: #01303b;"></i>
+                               </div>
+                               <div class="text-xl ">
+                                <p id="day-name" class="font-normal">Sat,</p>
+                                <p id="full-date" class="font-bold">2 March,2025</p>
+                               </div>
+                            </div>
                         </div>
-                        <div>
-                            <p class="text-x font-medium">Task Assigned</p>
-                            <p class="text-2xl font-bold">0</p>
+                        <div class="flex justify-center items-center gap-6 mt-10">
+                            <div class="m-2">
+                                <div class="bg-[#f4f7ff] shadow-md rounded-lg p-5 mb-4" style="width: 342px; height: 250px;">
+                                    <span class="bg-[#eef2ff] text-[#3d5ff8] px-3 py-1 rounded-md text-sm font-medium">ShopEase</span>
+                                    <h2 class="text-xl font-semibold mt-3">Fix Mobile Button Issue</h2>
+                                    <p class="bg-white p-3 rounded-lg text-gray-500 mt-2 text-sm">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick...</p>
+                                    <div class="border-t border-dashed mt-4 pt-3 flex justify-between items-center">
+                                        <span class="text-gray-500 text-sm">Deadline<br><strong>21 March 2025</strong></span>
+                                        <span class="bg-[#3461f3] text-white px-4 py-1 rounded-md text-sm">Complete</span>
+                                    </div>
+                                </div>
+                                <div class="bg-[#f4f7ff] shadow-md rounded-lg p-5" style="width: 342px; height: 250px;">
+                                    <span class="bg-[#eef2ff] text-[#3d5ff8] px-3 py-1 rounded-md text-sm font-medium">CloudSync</span>
+                                    <h2 class="text-xl font-semibold mt-3">Add Dark Mode</h2>
+                                    <p class="bg-white p-3 rounded-lg text-gray-500 mt-2 text-sm">Store the user's preference in localStorage, update CSS variables dynamically, and...</p>
+                                    <div class="border-t border-dashed mt-4 pt-3 flex justify-between items-center">
+                                        <span class="text-gray-500 text-sm">Deadline<br><strong>21 March 2025</strong></span>
+                                        <span class="bg-[#3461f3] text-white px-4 py-1 rounded-md text-sm">Complete</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="m-2">
+                                <div class="bg-[#f4f7ff] shadow-md rounded-lg p-5 mb-4" style="width: 342px; height: 250px;">
+                                    <span class="bg-[#eef2ff] text-[#3d5ff8] px-3 py-1 rounded-md text-sm font-medium">SwiftPay</span>
+                                    <h2 class="text-xl font-semibold mt-3">Optimize Home page</h2>
+                                    <p class="bg-white p-3 rounded-lg text-gray-500 mt-2 text-sm">Analyze load times and remove unused code, implement lazy loading, ensure...</p>
+                                    <div class="border-t border-dashed mt-4 pt-3 flex justify-between items-center">
+                                        <span class="text-gray-500 text-sm">Deadline<br><strong>21 March 2025</strong></span>
+                                        <span class="bg-[#3461f3] text-white px-4 py-1 rounded-md text-sm">Complete</span>
+                                    </div>
+                                </div>
+                                <div class="bg-[#f4f7ff] shadow-md rounded-lg p-5" style="width: 342px; height: 250px;">
+                                    <span class="bg-[#eef2ff] text-[#3d5ff8] px-3 py-1 rounded-md text-sm font-medium">Meta</span>
+                                    <h2 class="text-xl font-semibold mt-3">Add new emoji 🤲</h2>
+                                    <p class="bg-white p-3 rounded-lg text-gray-500 mt-2 text-sm">Ensure proper display and compatibility across devices, style with CSS if needed...</p>
+                                    <div class="border-t border-dashed mt-4 pt-3 flex justify-between items-center">
+                                        <span class="text-gray-500 text-sm">Deadline<br><strong>21 March 2025</strong></span>
+                                        <span class="bg-[#3461f3] text-white px-4 py-1 rounded-md text-sm">Complete</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="m-2">
+                                <div class="bg-[#f4f7ff] shadow-md rounded-lg p-5 mb-4" style="width: 342px; height: 250px;">
+                                    <span class="bg-[#eef2ff] text-[#3d5ff8] px-3 py-1 rounded-md text-sm font-medium">Google LLC</span>
+                                    <h2 class="text-xl font-semibold mt-3">Integrate OpenAI API</h2>
+                                    <p class="bg-white p-3 rounded-lg text-gray-500 mt-2 text-sm">Set up secure API keys, handle asynchronous calls, implement error management, and...</p>
+                                    <div class="border-t border-dashed mt-4 pt-3 flex justify-between items-center">
+                                        <span class="text-gray-500 text-sm">Deadline<br><strong>21 March 2025</strong></span>
+                                        <span class="bg-[#3461f3] text-white px-4 py-1 rounded-md text-sm">Complete</span>
+                                    </div>
+                                </div>
+                                <div class="bg-[#f4f7ff] shadow-md rounded-lg p-5" style="width: 342px; height: 250px;">
+                                    <span class="bg-[#eef2ff] text-[#3d5ff8] px-3 py-1 rounded-md text-sm font-medium">Glassdoor</span>
+                                    <h2 class="text-xl font-semibold mt-3">Improve Job Searching</h2>
+                                    <p class="bg-white p-3 rounded-lg text-gray-500 mt-2 text-sm">Enhance the search functionality with advanced filters, add pagination for...</p>
+                                    <div class="border-t border-dashed mt-4 pt-3 flex justify-between items-center">
+                                        <span class="text-gray-500 text-sm">Deadline<br><strong>21 March 2025</strong></span>
+                                        <span class="bg-[#3461f3] text-white px-4 py-1 rounded-md text-sm">Complete</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="w-[524px] h-[128px] bg-[#f4f7ff] rounded-xl bg-linear-to-r from-[#3d5ff8] to-[#91a1f4] flex justify-center items-center ml-8 gap-4">
-                        <img src="assets/board.png" alt="">
-                        <p class="text-xl font-medium text-white">Discover Something <br> New Today</p>
-                    </div>
-                    <div id="chng-date" class="w-[263px] h-[128px] bg-[#f4f7ff] rounded-xl flex justify-center items-center gap-4" >
-                       <div class="w-[64px] h-[64px] bg-white rounded-xl flex justify-center items-center">
-                        <i class="fa-solid fa-toolbox fa-2xl" style="color: #01303b;"></i>
-                       </div>
-                       <div class="text-xl ">
-                        <p class="font-normal">saturday</p>
-                        <p class="font-bold">2 March,2025</p>
-                       </div>
-                    </div>
-                </div>
-                <div class="w-[366px] h-[918px] bg-white rounded-xl">
-                    <div class="my-5 border-b-2 border-dashed border-[#f4f7ff]">
+                </section>
+            </section>
+            <section>
+                <div class="w-[366px] h-[918px] bg-white rounded-xl my-4">
+                    <div class="my-5 border-b-2 border-dashed border-[#f4f7ff] p-2">
                         <div class="flex justify-center items-center gap-4">
                             <i class="fa-solid fa-clock-rotate-left fa-xl" style="color: #01303b;"></i>
                             <p class="text-lg font-medium">Activity Log</p>
@@ -67,13 +134,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            
+            </section>
         </section>
-            
-           
-       
-        
     </main>
     <script src="./script/chng-btn.js" defer ></script>
     <script src="./utilities/utilities.js" defer ></script>
