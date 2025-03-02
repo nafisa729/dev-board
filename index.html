@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev-Board</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="https://kit.fontawesome.com/439ca93636.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-[#f4f7ff] h-screen m-0 p-0 flex flex-col justify-between overflow-hidden">
+    <header>
+       <nav class="flex justify-between w-[1536px] h-[100px] bg-white rounded-xl mx-auto my-10">
+         <div class="flex items-center gap-4 ml-10 my-2">
+                <img src="assets/logo.png" alt="">
+                <h1 class="text-4xl">Dev<span class="font-bold">Board</span></h1>
+           </div> 
+           <div class="navbar-end gap-4">
+            <div class="w-[110px] h-[50px] bg-[#f4f7ff] rounded-3xl flex justify-center items-center gap-3">
+                <i class="fa-solid fa-square-check fa-2xl" style="color: #385af8;"></i>
+                <p class="text-2xl font-bold">23</p>  
+            </div>
+            <div id="chng-btn" class="w-[64px] h-[64px] rounded-full bg-[#f4f7ff] flex justify-center items-center mr-4">
+                <img src="assets/theme-btn.png" alt="">
+            </div>
+           </div> 
+       </nav>
+    </header>
+    <main>
+        <div class="flex justify-center items-center gap-4">
+            <div class="w-[1146px] h-[918px] bg-white rounded-xl flex justify-center gap-4 pt-5">
+                <div class="w-[263px] h-[128px] bg-[#f4f7ff] rounded-xl flex justify-center items-center gap-5">
+                    <div class="w-[64px] h-[64px] bg-white rounded-full flex justify-center items-center">
+                        <i class="fa-solid fa-square-check fa-2xl" style="color: #385af8;"></i>   
+                    </div>
+                    <div>
+                        <p class="text-x font-medium">Task Assigned</p>
+                        <p class="text-2xl font-bold">0</p>
+                    </div>
+                </div>
+                <div class="w-[524px] h-[128px] bg-[#f4f7ff] rounded-xl bg-linear-to-r from-[#3d5ff8] to-[#91a1f4] flex justify-center items-center ml-8 gap-4">
+                    <img src="assets/board.png" alt="">
+                    <p class="text-xl font-medium text-white">Discover Something <br> New Today</p>
+                </div>
+                <div id="chng-date" class="w-[263px] h-[128px] bg-[#f4f7ff] rounded-xl flex justify-center items-center gap-4" >
+                   <div class="w-[64px] h-[64px] bg-white rounded-xl flex justify-center items-center">
+                    <i class="fa-solid fa-toolbox fa-2xl" style="color: #01303b;"></i>
+                   </div>
+                   <div class="text-xl ">
+                    <p class="font-normal">saturday</p>
+                    <p class="font-bold">2 March,2025</p>
+                   </div>
+                </div>
+            </div>
+            <!-- side div -->
+            <div class="w-[366px] h-[918px] bg-white rounded-xl"></div>
+        </div>
+        
+    </main>
+    <script src="./script/chng-btn.js" defer ></script>
+    <script src="./utilities/utilities.js" defer ></script>
+    <script src="./script/chng-date.js"></script>
+</body>
+</html>
